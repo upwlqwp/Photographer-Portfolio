@@ -79,7 +79,7 @@ a {
 body {
   background-color: #e0e2de;
   min-height: 100vh;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Mali", sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: #212121;
@@ -114,11 +114,12 @@ body {
 }
 
 .header__top--bg {
-  background-color: #fbca6d;
+  background-color: #a5a58d;
   padding: 20px 0;
 }
 
 .title {
+  font-family: 'Rancho';
   display: inline-block;
   font-weight: 700;
   font-size: 48px;
@@ -134,7 +135,7 @@ body {
   height: 15px;
   bottom: 5px;
   left: 0;
-  background-color: #fbc96d9b;
+  background-color: #a5a58d33;
 }
 
 .animation {
@@ -163,13 +164,13 @@ body {
 
   background-size: 200% auto;
 
-  box-shadow: 0 0 10px #eee;
+  box-shadow: 0 0 20px #a5a58d;
 
   background-image: linear-gradient(
     to right,
     #ccd5ae 0%,
     #e9edc9 51%,
-    #fefae0 100%
+    #dad9d6 100%
   );
 
   border: 1px solid transparent;
@@ -316,14 +317,14 @@ body {
 .header__text {
   display: block;
   font-weight: 600;
-  font-size: 38px;
-  margin-bottom: 20px;
+  font-size: 48px;
+  margin-bottom: 40px;
 }
 
 .header__title {
   margin: auto 0;
-  max-width: 630px;
-  font-size: 20px;
+  max-width: 830px;
+  font-size: 33px;
   font-weight: 700;
 }
 
@@ -401,6 +402,7 @@ body {
 }
 
 .skills__text {
+  display: block;
   min-width: 94px;
   text-transform: uppercase;
   line-height: 1;
@@ -425,8 +427,9 @@ body {
 }
 
 .services__inner {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .services {
@@ -434,9 +437,10 @@ body {
 }
 
 .services__item {
-  max-width: 330px;
+  max-width: 370px;
   width: 100%;
-  padding: 16px;
+  padding: 10px;
+border-radius: 6px;
   background-size: 60px 60px;
   background-repeat: no-repeat;
   background-position: center 70px;
@@ -467,7 +471,7 @@ text-align: center;
 
 .services__text p {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   padding-top: 90px;
 }
@@ -535,7 +539,7 @@ text-align: center;
 
 .reviews__img {
   margin: 0 auto 20px;
-  border-radius: 50%;
+
 }
 
 .reviews__author {
@@ -556,6 +560,7 @@ text-align: center;
   width: 100%;
   max-width: 570px;
   height: 400px;
+
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -614,19 +619,19 @@ text-align: center;
 
 .statistics__list {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  gap: 30px;
-  text-align: center;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
 }
 
 .statistics__item {
   width: 100%;
-  max-width: 380px;
-  padding: 320px 0 10px;
+  max-width: 580px;
+  padding: 400px 10px 20px;
   border: 1px solid #dbdbed;
   border-radius: 4px;
-  background-size: 350px;
+  background-size: 450px;
+  margin-right: 30px;
   background-repeat: no-repeat;
   background-position: 50% 50px;
 }
@@ -780,6 +785,7 @@ text-align: center;
   .header__top {
     padding-top: 30px;
   }
+
 }
 
 @media (max-width: 992px) {
@@ -788,11 +794,11 @@ text-align: center;
   }
 
   .header__text {
-    font-size: 32px;
+    font-size: 26px;
   }
 
   .header__title {
-    font-size: 68px;
+    font-size: 38px;
   }
 
   .menu__list {
@@ -840,7 +846,7 @@ text-align: center;
   }
 
   .skills__item:not(:last-child) {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 
   .skills__img {
@@ -849,9 +855,10 @@ text-align: center;
 
   .services__item {
     max-width: 100%;
-    margin-bottom: 30px;
-    padding-top: 90px;
+    margin-bottom: 10px;
+    padding-top: 10px;
     background-size: 50px 50px;
+    background-position: top 50px center ;
   }
 
   .services__subtitle {
@@ -873,38 +880,19 @@ text-align: center;
   }
 
   .reviews__video {
-    width: 60%;
+    width: 40%;
   }
 
-  .statistics {
-    padding: 30px 0;
-  }
-
-  .statistics__item {
-    max-width: 230px;
-    background-size: 68px 50px;
-  }
-
-  .statistics__list {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-  }
-
-  .statistics__text {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  .statistics__numbers {
-    font-size: 36px;
-  }
+ 
+ 
 }
 
 @media (max-width: 768px) {
+  
   .section,
   .statistics,
   .services {
-    padding: 70px 0;
+    padding: 50px 0;
   }
 
   .logo {
@@ -921,13 +909,7 @@ text-align: center;
     margin-bottom: 30px;
   }
 
-  .header__text {
-    font-size: 32px;
-  }
-
-  .header__title {
-    font-size: 62px;
-  }
+  
 
   .skills,
   .about,
@@ -941,14 +923,15 @@ text-align: center;
     font-size: 16px;
   }
 
+ 
+
   .services__inner {
-    text-align: start;
-    flex-direction: column;
+     grid-template-columns: repeat(2, 1fr);
   }
 
   .services__item:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   .services__subtitle {
@@ -983,12 +966,7 @@ text-align: center;
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .statistics__item {
-    max-width: 100%;
-    padding: 120px 10px 20px;
-    background-size: 68px 50px;
-    background-position: 50% 30px;
-  }
+  
 
   .address {
     text-align: start;
@@ -1020,7 +998,7 @@ text-align: center;
 @media (max-width: 576px) {
   .section,
   .services .contacts {
-    padding: 50px 0;
+    padding: 30px 0;
   }
 
   .header__top--bg {
@@ -1041,13 +1019,7 @@ text-align: center;
     margin-bottom: 15px;
   }
 
-  .header__text {
-    font-size: 28px;
-  }
-
-  .header__title {
-    font-size: 40px;
-  }
+ 
 
   .about__text p:not(:last-child) {
     margin-bottom: 20px;
@@ -1085,17 +1057,27 @@ text-align: center;
   }
 
   .skills__item {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
+  .services__inner {
+    display: flex;
+    
+ }
+
   .services__item {
-    padding-top: 50px;
+    padding-top: 10px;
     background-size: 40px 40px;
+     background-position: center 50px;
   }
 
   .services {
     padding-bottom: 0;
   }
+
+  .services__text p {
+  padding-top: 50px;
+}
 
   .skills__item:not(:last-child) {
     margin-right: 0;
@@ -1153,8 +1135,8 @@ text-align: center;
   .reviews__video,
   .reviews__video::before {
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
   }
 
   .reviews__video::after {
@@ -1163,9 +1145,9 @@ text-align: center;
   }
 
   .statistics__item {
-    padding: 80px 10px 20px;
-    background-size: 42px 35px;
-    background-position: 50% 20px;
+    padding: 100px 10px 20px;
+    background-size: 120px 80px;
+   background-position: top 10px center;
   }
 
   .statistics__text {
@@ -1174,7 +1156,7 @@ text-align: center;
   }
 
   .statistics__numbers {
-    font-size: 30px;
+    font-size: 18px;
   }
 
   .contacts__wrapper {
@@ -1207,3 +1189,4 @@ text-align: center;
     padding: 32px auto;
   }
 }
+
